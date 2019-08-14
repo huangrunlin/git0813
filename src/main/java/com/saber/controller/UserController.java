@@ -38,13 +38,6 @@ public class UserController {
         return "allUser";
     }
 
-    @RequestMapping("getAllUserT")
-    public String getAllUserT(Model model){
-        List<User> user =userService.findAll();
-        model.addAttribute("userList",user);
-        return "allUserT";
-    }
-
     @RequestMapping("delUser")
     public String removeUser(Model model,Integer id){
         model.addAttribute("user",userService.deleteUser(id));
